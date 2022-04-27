@@ -1,11 +1,16 @@
-import React from 'react'
 import './pagestyles.css'
+import React from 'react'
 
 
-function candidates() {
-  return (
-    <div className='text'>Select a candidate to vote</div>
-  )
-}
 
-export default candidates
+
+  function Candidates() {
+    
+    return (
+      <div className='text'>Candidate sign up form</div>
+    )
+  }
+
+  
+  export default Candidates;
+  

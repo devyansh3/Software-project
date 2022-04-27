@@ -2,11 +2,60 @@ import React, { useState } from "react"
 import { Card, Button, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import { db } from "../firebase"
+import { collection, getDocs, setDoc, doc} from "firebase/firestore";
+import { useEffect } from "react";
+
+
+async function getUsers() {
+  const usersRef = collection(db, "users");
+  const usersData = await getDocs(usersRef);
+  
+  return usersData;
+}
+async function postUser(user) {
+  try{
+   let  user = {
+      "name":"some",
+      "age":20,
+      "img":"url"
+    }
+    const usersRef = collection(db,"users");
+    await setDoc(doc(usersRef),user);
+    return 1;
+  }catch(e){
+    console.log(e)
+  }
+} 
 
 export default function Dashboard() {
   const [error, setError] = useState("")
   const { currentUser, logout } = useAuth()
   const history = useHistory()
+  const [userData, setUserData] = useState([]);
+
+  useEffect(() => {
+    const data = getUsers()
+      .then((res) => {
+        res.docs.forEach((user) => {
+          setUserData([...userData, user.data()]);
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      postUser()
+      .then((res) => {
+        console.log("success")
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    console.log(userData);
+  }, [userData]);
 
   async function handleLogout() {
     setError("")
