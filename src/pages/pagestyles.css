@@ -1,0 +1,18 @@
+.text{
+    font-size: xx-large;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    margin-top: 4%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.text-contained{
+    font-size: xx-large;
+    font-weight: 800;
+    margin-top: 2%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+
+}
