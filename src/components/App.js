@@ -14,6 +14,7 @@ import Reports from "../pages/Reports"
 import LiveChat from "../pages/LiveChat"
 import candidates from "../pages/candidates"
 import support from "../pages/support"
+import List from "./List"
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
               <Route path="/chat" component={LiveChat} />
               <Route path="/candidates" component={candidates} />
               <Route path="/support" component={support} />
+              <Route path="/list" component={List}/>
 
 
 

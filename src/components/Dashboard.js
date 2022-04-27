@@ -5,6 +5,7 @@ import { Link, useHistory } from "react-router-dom"
 import { db } from "../firebase"
 import { collection, getDocs, setDoc, doc} from "firebase/firestore";
 import { useEffect } from "react";
+import List from './List'
 
 
 async function getUsers() {
@@ -92,6 +93,7 @@ export default function Dashboard() {
           <img style={{maxWidth: '50%', marginLeft: '25%' }} src="https://image.shutterstock.com/image-vector/female-candidate-avatar-tied-hairs-260nw-1088450453.jpg"/>
           <h2 style={{fontSize: '14px', textAlign: "center"}}><strong>ACM-Elections</strong></h2>
           <h3 style={{fontSize: '12px', textAlign: "center"}}>No of candidates:<string> 13</string></h3>
+          <Link to='/list'>Vote</Link>
         </Card.Body>
       </Card>
      
