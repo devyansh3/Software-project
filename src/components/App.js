@@ -13,8 +13,9 @@ import './App.css'
 import Reports from "../pages/Reports"
 import LiveChat from "../pages/LiveChat"
 import candidates from "../pages/candidates"
-import support from "../pages/support"
 import List from "./List"
+import Mechanical from "./Mechanical"
+import Club from "./Club"
 
 function App() {
   return (
@@ -38,8 +39,10 @@ function App() {
               <Route path="/reports" component={Reports} />
               <Route path="/chat" component={LiveChat} />
               <Route path="/candidates" component={candidates} />
-              <Route path="/support" component={support} />
               <Route path="/list" component={List}/>
+              <Route path="/mechanical" component={Mechanical}/>
+              <Route path="/club" component={Club}/>
+
 
 
 

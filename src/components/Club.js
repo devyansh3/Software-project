@@ -11,11 +11,11 @@ let data = {
   3: 0,
 };
 
-function List() {
+function Club() {
   const [voted, setVoted] = useState(false);
 
   const notify = () =>
-    toast.success("Thanks for Voting!", {
+    toast.success("🦄 Thanks for Voting!", {
       position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,
@@ -47,7 +47,7 @@ function List() {
         <tbody>
           <tr id={"1"}>
             <td id={"1"}>1</td>
-            <td>Mark</td>
+            <td>Rohan</td>
             <td>President</td>
             <td id="1">
               <button className="vote-button" value="1" id="1" onClick={vote} disabled={voted}>
@@ -57,7 +57,7 @@ function List() {
           </tr>
           <tr id={"2"}>
             <td>2</td>
-            <td>Jacob</td>
+            <td>Anush</td>
             <td>President</td>
             <td id="2">
               <button className="vote-button" value="2" id="2" onClick={vote} disabled={voted}>
@@ -67,7 +67,7 @@ function List() {
           </tr>
           <tr id={"3"}>
             <td>3</td>
-            <td>Larry</td>
+            <td>Keshav</td>
             <td>Secretary</td>
             <td id="3">
               <button className="vote-button" value="3" id="3" onClick={vote} disabled={voted}>
@@ -92,4 +92,4 @@ function List() {
   );
 }
 
-export default List;
+export default Club;

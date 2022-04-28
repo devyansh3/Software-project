@@ -1,11 +1,12 @@
 import React, { useState } from "react"
-import { Card, Button, Alert } from "react-bootstrap"
+import {Button, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import { db } from "../firebase"
 import { collection, getDocs, setDoc, doc} from "firebase/firestore";
 import { useEffect } from "react";
 import List from './List'
+import Card from './Card'
 
 
 async function getUsers() {
@@ -71,7 +72,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <Card>
+      {/* <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Update</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -80,22 +81,44 @@ export default function Dashboard() {
             Update Profile
           </Link>
         </Card.Body>
-      </Card>
-      <div className="w-100 text-center mt-2">
+      </Card> */}
+      
+
+      <div className="wrapper mt-5">
+      <Card
+        img="/acm1png.png"
+        title="ACM-elections"
+        description="Candidates : 5" 
+        date="End date: 3rd may"
+        
+          route='/list'
+      />
+
+      <Card
+        img='mech.jpg'
+        title="Mech society"
+        description="Candidates : 6" 
+        date="End date: 2nd june"
+        route='/mechanical'
+      />
+
+      <Card
+        img='club.jpg'
+        title="Club elections"
+        description="Candidates : 7" 
+        date="End date: 5th march"
+        route='/club'
+      />
+    </div>
+
+    <div className="w-100 text-center mt-3">
         <Button variant="link" onClick={handleLogout}>
           Log Out
         </Button>
       </div>
 
      
-      <Card>
-        <Card.Body>
-          <img style={{maxWidth: '50%', marginLeft: '25%' }} src="https://image.shutterstock.com/image-vector/female-candidate-avatar-tied-hairs-260nw-1088450453.jpg"/>
-          <h2 style={{fontSize: '14px', textAlign: "center"}}><strong>ACM-Elections</strong></h2>
-          <h3 style={{fontSize: '12px', textAlign: "center"}}>No of candidates:<string> 13</string></h3>
-          <Link to='/list'>Vote</Link>
-        </Card.Body>
-      </Card>
+     
      
     </>
   )

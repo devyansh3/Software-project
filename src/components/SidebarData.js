@@ -29,10 +29,14 @@ export const SidebarData = [
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },
+  
+
   {
-    title: 'Support',
-    path: '/support',
+    title: 'Update profile',
+    path: '/update-profile',
     icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'
   }
+
+
 ];
