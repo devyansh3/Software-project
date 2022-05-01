@@ -4,7 +4,6 @@ import { Table } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 let data = {
   1: 0,
   2: 0,
@@ -35,7 +34,7 @@ function Mechanical() {
   return (
     <div>
       <h1 style={{ textAlign: "center", marginTop: "1%" }}>ACM Elections</h1>
-      <Table striped bordered hover variant="light" style={{ marginTop: "2%" }}>
+      <Table striped bordered hover variant='light' style={{ marginTop: "2%" }}>
         <thead>
           <tr>
             <th>#</th>
@@ -47,30 +46,48 @@ function Mechanical() {
         <tbody>
           <tr id={"1"}>
             <td id={"1"}>1</td>
-            <td>Rohan</td>
+            <td>Ananya</td>
             <td>President</td>
-            <td id="1">
-              <button className="vote-button" value="1" id="1" onClick={vote} disabled={voted}>
+            <td id='1'>
+              <button
+                className='vote-button'
+                value='1'
+                id='1'
+                onClick={vote}
+                disabled={voted}
+              >
                 Vote Confirm
               </button>
             </td>
           </tr>
           <tr id={"2"}>
             <td>2</td>
-            <td>Anush</td>
+            <td>dhanush</td>
             <td>President</td>
-            <td id="2">
-              <button className="vote-button" value="2" id="2" onClick={vote} disabled={voted}>
+            <td id='2'>
+              <button
+                className='vote-button'
+                value='2'
+                id='2'
+                onClick={vote}
+                disabled={voted}
+              >
                 Vote Confirm
               </button>
             </td>
           </tr>
           <tr id={"3"}>
             <td>3</td>
-            <td>Keshav</td>
+            <td>Amit</td>
             <td>Secretary</td>
-            <td id="3">
-              <button className="vote-button" value="3" id="3" onClick={vote} disabled={voted}>
+            <td id='3'>
+              <button
+                className='vote-button'
+                value='3'
+                id='3'
+                onClick={vote}
+                disabled={voted}
+              >
                 Vote Confirm
               </button>
             </td>
@@ -78,7 +95,7 @@ function Mechanical() {
         </tbody>
       </Table>
       <ToastContainer
-        position="top-center"
+        position='top-center'
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
